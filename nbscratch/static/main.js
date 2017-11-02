@@ -110,11 +110,12 @@ define([
         return false;
     }
 
+    // TODO I think we may want this to come up from the bottom of the notebook
     Scratchpad.prototype.expand = function(){
         this.collapsed = false;
         var site_height = $("#site").height();
         this.element.animate({
-            height: site_height
+            height: site_height / 2
         }, 400)
         this.open_button.hide();
         this.close_button.show();
