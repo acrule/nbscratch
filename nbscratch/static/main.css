@@ -1,11 +1,8 @@
 #scratchpad {
     position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 50%;
+    top: 124px;
+    width: inherit;
     background-color: #F8F5E1;
-    border-left: 1px solid #aaa;
-    border-top: 1px solid #aaa;
     z-index: 105;
 }
 
@@ -15,8 +12,9 @@
 }
 
 .scratchpad-btn {
-  float: right;
-  margin-right: 24px;
+  position: absolute;
+  top: 0px;
+  right: -24px;
   opacity: 0.2;
   font-size: 24px;
   z-index: 106;
@@ -28,12 +26,11 @@
 
 .scratchpad-close {
   display: none;
-  position: absolute;
-  float: right;
-  bottom: 8px;
-  right: 0;
 }
 
 .scratchpad-open {
-  margin-top: -32px;
+}
+
+.cell-wrapper{
+    height: auto;
 }

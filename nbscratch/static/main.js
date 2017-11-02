@@ -28,8 +28,8 @@ define([
 
         // create html elements
         this.element = $("<div id=scratchpad>")
-        this.close_button = $("<i>").addClass("fa fa-caret-square-o-down scratchpad-btn scratchpad-close");
-        this.open_button = $("<i>").addClass("fa fa-caret-square-o-up scratchpad-btn scratchpad-open");
+        this.close_button = $("<i>").addClass("fa fa-caret-square-o-right scratchpad-btn scratchpad-close");
+        this.open_button = $("<i>").addClass("fa fa-caret-square-o-left scratchpad-btn scratchpad-open");
         this.element.append(this.close_button);
         this.element.append(this.open_button);
 
@@ -52,7 +52,7 @@ define([
 
         // render cell
         cell.set_input_prompt();
-        this.element.append($("<div/>").addClass('cell-wrapper').append(this.cell.element));
+        this.element.append($("<div/>").attr('id', 'cell-wrapper').addClass('cell-wrapper').append(this.cell.element));
         cell.render();
         cell.refresh();
         this.collapse();
@@ -79,7 +79,7 @@ define([
         this.km.command_shortcuts.add_shortcuts(shortcuts);
 
         // finally, add scratchpad the page
-        $("body").append(this.element);
+        $("#menubar-container").append(this.element);
     };
 
     Scratchpad.prototype.execute_and_select_event = function(evt){
